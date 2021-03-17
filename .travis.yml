@@ -22,15 +22,16 @@ matrix:
      env: PHPUNIT_VERSION=7.5
      dist: trusty
 
-   - php: 7.2
-     env: PHPUNIT_VERSION=8.1
-     dist: trusty
-
    - php: 7.3
      env: PHPUNIT_VERSION=7.5
      dist: trusty
 
+  allow_failures:
    - php: 7.3
+     env: PHPUNIT_VERSION=8.1
+     dist: trusty
+
+   - php: 7.2
      env: PHPUNIT_VERSION=8.1
      dist: trusty
 
