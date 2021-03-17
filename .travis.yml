@@ -30,7 +30,7 @@ matrix:
 
    - php: 7.4
      env:
-      - PHPUNIT_VERSION=7.5
+      - PHPUNIT_VERSION=8.5
       - XDEBUG_MODE=coverage
      dist: xenial
   allow_failures:
@@ -50,12 +50,6 @@ matrix:
 
    - php: 7.3
      env: PHPUNIT_VERSION=9.5
-     dist: xenial
-
-   - php: 7.4
-     env:
-      - PHPUNIT_VERSION=8.5
-      - XDEBUG_MODE=coverage
      dist: xenial
 
    - php: 7.4
