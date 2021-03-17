@@ -570,7 +570,9 @@ class Phake
     {
         if (!isset(self::$client)) {
             if (class_exists('PHPUnit\Framework\TestCase')) {
-                if (7 <= \PHPUnit\Runner\Version::id()) {
+                if (8 <= \PHPUnit\Runner\Version::id()) {
+                    return self::$client = new Phake_Client_PHPUnit8();
+                } else if (7 <= \PHPUnit\Runner\Version::id()) {
                     return self::$client = new Phake_Client_PHPUnit7();
                 } else {
                     return self::$client = new Phake_Client_PHPUnit6();
