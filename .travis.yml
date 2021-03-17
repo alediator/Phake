@@ -23,7 +23,9 @@ matrix:
      dist: trusty
 
    - php: 7.3
-     env: PHPUNIT_VERSION=7.5
+     env:
+      - PHPUNIT_VERSION=7.5
+      - XDEBUG_MODE=coverage
      dist: trusty
 
   allow_failures:
