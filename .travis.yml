@@ -33,6 +33,11 @@ matrix:
       - PHPUNIT_VERSION=8.5
       - XDEBUG_MODE=coverage
      dist: xenial
+
+   - php: 8.0
+     env: PHPUNIT_VERSION=8.5
+     dist: xenial
+
   allow_failures:
    - php: 7.2
      env: PHPUNIT_VERSION=8.1
@@ -58,10 +63,6 @@ matrix:
 
    - php: 7.4
      env: PHPUNIT_VERSION=9.5
-     dist: xenial
-
-   - php: 8.0
-     env: PHPUNIT_VERSION=8.5
      dist: xenial
 
    - php: 8.0
