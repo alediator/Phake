@@ -336,7 +336,7 @@ class {$newClassName} {$extends}
         }
         foreach ($mockedClass->getMethods($filter) as $method) {
             $methodName = $method->getName();
-            if (!$method->isConstructor() && !$method->isDestructor() && !$method->isFinal()
+            if (($mockedClass->isInterface() || !$method->isConstructor() && !$method->isDestructor()) && !$method->isFinal()
                 && !isset($implementedMethods[$methodName])
             ) {
                 $implementedMethods[$methodName] = $methodName;
